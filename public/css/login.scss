@@ -1,0 +1,74 @@
+font-family: 'Playfair Display', serif;
+font-family: 'Spectral', serif;
+font-family: 'Ultra', serif;
+font-family: 'Crimson Text', serif;
+
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Merriweather:300|Playfair+Display|Spectral|Ultra|Vast+Shadow" rel="stylesheet">
+
+
+$fontBody: 'Merriweather', serif;
+
+$fontLogo: 'Vast Shadow', cursive;
+
+$primaryColor: 
+
+$secondaryColor: #999;
+
+
+body {
+    width: 100%;
+    max-width: 1024px;
+    font: 300 1em $ontBody;
+}
+
+.logo {
+    font: 400 2em $fontLogo;
+}
+
+rowWrapper {
+    display: flex;
+    content-justify
+}
+
+input {
+    box-sizing: border-box;
+    background-color: transparent;
+    border-style: none;
+    padding: 10px 20px 10px;
+    font: 400 1em 'Zilla Slab', serif;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}   
+
+label {
+    font-size: .7em;
+    color: $secondaryColor;
+    background: #fff;
+    border: 1px solid $secondaryColor;
+    border-width: 0 1px 0 1px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    opacity: 1;
+    padding: 0 5px;
+    transition: all 0.35s;
+    transform: translateY(calc(-50% - 1px));
+}
+
+input::placeholder {
+    font-size: 1em;
+    color: $secondaryColor;
+}
+
+/* adds input field name to top of field test */
+input:placeholder-shown + label {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+input:focus {
+    outline: none;
+    border-color: #fff;
+}
+
