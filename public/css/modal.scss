@@ -31,14 +31,14 @@ body {
 .form-row {
     box-sizing: border-box;
     border: 1px solid $primaryColor;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     position: relative;
     /* for input label position*/
     text-align: center;
 }
 
 .col-6 {
-    width: 60%;
+
 }
 
 button {
@@ -93,7 +93,14 @@ button:hover {
 }
 
 .modalContent {
-    width: 40%
+    box-sizing: border-box;
+    background-color: #eee;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 40%;
+    padding: 50px;
 }
 
 
