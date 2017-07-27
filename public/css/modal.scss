@@ -1,7 +1,8 @@
 @import 'var';
 
 @mixin background-opacity($color, $opacity: 1) {
-    background: $color; /* The Fallback */
+    background: $color;
+    /* The Fallback */
     background: rgba($color, $opacity);
 }
 
@@ -21,6 +22,7 @@ body {
     justify-content: flex-end;
     align-items: center;
 }
+
 .logo {
     font: 400 2.25em $fontLogo;
     flex: 3;
@@ -29,12 +31,14 @@ body {
 .form-row {
     box-sizing: border-box;
     border: 1px solid $primaryColor;
-    margin-left: 10px;
-    position: relative; /* for input label position*/
+    margin-bottom: 10px;
+    position: relative;
+    /* for input label position*/
+    text-align: center;
 }
 
 .col-6 {
-    width: 40%;
+    width: 60%;
 }
 
 button {
@@ -42,7 +46,7 @@ button {
     background-color: transparent;
     border-style: none;
     outline: none;
-    line-height: 1.7;    
+    line-height: 1.7;
     color: $secondaryColor;
     padding: 10px 20px 10px;
     display: block;
@@ -53,7 +57,7 @@ button {
     width: 100%;
     text-align: left;
     cursor: pointer;
-}  
+}
 
 .key {
     position: absolute;
@@ -74,7 +78,9 @@ button:hover {
     color: $primaryColor;
 }
 
+
 /* modal sign-up window*/
+
 .signUpModal {
     display: flex;
     justify-content: center;
@@ -83,32 +89,20 @@ button:hover {
     position: absolute;
     top: 0;
     left: 0;
-    @include background-opacity($bgColor, 0.9);
+    @include background-opacity(black, 0.85);
 }
 
 .modalContent {
-    text-align: center;
-width: 40%
+    width: 40%
 }
-
-button {
-    box-sizing: border-box;
-    background-color: transparent;
-    border-style: none;
-    padding: 10px 20px 10px;
-    font: $fontBody;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-}   
 
 
 input {
-   @extend button;
-}   
+    @extend button;
+}
 
 label {
-    font-size: .7em;
+    font: 300 .6em $fontBody;
     color: $secondaryColor;
     background-color: $bgColor;
     border: 1px solid $primaryColor;
@@ -123,13 +117,14 @@ label {
 }
 
 input::placeholder {
-    font-size: 1em;
+    font: 300 1em $fontBody;
     color: $secondaryColor;
-
 }
 
+
 /* adds input field name to top of field test */
-input:placeholder-shown + label {
+
+input:placeholder-shown+label {
     opacity: 0;
     transform: translateY(100%);
 }
@@ -138,4 +133,3 @@ input:focus {
     outline: none;
     border-color: #fff;
 }
-

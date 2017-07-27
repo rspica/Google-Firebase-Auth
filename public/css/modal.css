@@ -28,12 +28,13 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #ec7705;
-  margin-left: 10px;
+  margin-bottom: 10px;
   position: relative;
-  /* for input label position*/ }
+  /* for input label position*/
+  text-align: center; }
 
 .col-6 {
-  width: 40%; }
+  width: 60%; }
 
 button, input {
   -webkit-box-sizing: border-box;
@@ -84,27 +85,15 @@ button:hover, input:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background: #F4F4F4;
+  background: black;
   /* The Fallback */
-  background: rgba(244, 244, 244, 0.9); }
+  background: rgba(0, 0, 0, 0.85); }
 
 .modalContent {
-  text-align: center;
   width: 40%; }
 
-button, input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: transparent;
-  border-style: none;
-  padding: 10px 20px 10px;
-  font: "Merriweather", serif;
-  width: 100%;
-  text-align: left;
-  cursor: pointer; }
-
 label {
-  font-size: .7em;
+  font: 300 0.6em "Merriweather", serif;
   color: #999;
   background-color: #F4F4F4;
   border: 1px solid #ec7705;
@@ -120,15 +109,15 @@ label {
           transform: translateY(calc(-50% - 1px)); }
 
 input::-webkit-input-placeholder {
-  font-size: 1em;
+  font: 300 1em "Merriweather", serif;
   color: #999; }
 
 input:-ms-input-placeholder {
-  font-size: 1em;
+  font: 300 1em "Merriweather", serif;
   color: #999; }
 
 input::placeholder {
-  font-size: 1em;
+  font: 300 1em "Merriweather", serif;
   color: #999; }
 
 /* adds input field name to top of field test */
