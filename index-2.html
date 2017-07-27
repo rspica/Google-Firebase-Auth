@@ -7,7 +7,7 @@
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" type="text/css" href="public/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="public/css/header.css">
+    <link rel="stylesheet" type="text/css" href="public/css/modal.css">
     <!-- Googel fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Vast+Shadow" rel="stylesheet">
     <!-- Firebase -->
@@ -19,27 +19,39 @@
         <div class="logo col-6">
             <h1>MyHood</h1>
         </div>
-        <div class="form-row col-6">
-            <input id="textEmail" class="validate" type="email" placeholder="Email address" reqiured>
-            <label for="textEmail">email address</label>
-        </div>
-        <div class="form-row col-6">
-            <input id="textPassword" class="validate" type="password" placeholder="Password" required>
-            <label for="textPassword">Password</label>
-        </div>
         <div class="Btn-wrapper">
             <button id="btn-Login"><img src="public/images/key_solid.svg" class="key" alt="Key to unlock"> Log in </button>
         </div>
         <div>
-        <button id="btn-SignUp" class="btn-style"> Sign up </button>
+            <button id="btn-SignUp" class="btn-style"> Sign me up </button>
         </div>
-        <!--     <button id="btn-Logout" class="btn-style btn-action hide"> Log out </button>
+    </header>
+    <!-- modal window for sign up -->
+    <section class="signUpModal">
+        <div class="modalContent">
+            <div class="form-row col-6">
+                <input id="textEmail" class="validate" type="email" placeholder="Email address" reqiured>
+                <label for="textEmail">email address</label>
+            </div>
+            <div class="form-row col-6">
+                <input id="textPassword" class="validate" type="password" placeholder="Password" required>
+                <label for="textPassword">Password</label>
+            </div>
+            <div>
+                <button id="btn-Login"><img src="public/images/key_solid.svg" class="key" alt="Key to unlock"> Log in </button>
+            </div>
+            <div>
+                <button id="btn-SignUp" class="btn-style"> Sign me up </button>
+            </div>
+        </div>
+    </section>
+    <!--     <button id="btn-Logout" class="btn-style btn-action hide"> Log out </button>
         </form>
     </header>
     <main>
         <p>Welcom to Chaperon, a local insiders curated field guide to the lesser know local spots that fly under the radar. This is for people who love finding and exploring new places or who find themselves in a strange place with no resource to turn to. Chaperon, it's like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.</p>
     </main> -->
-        <!-- <div class="jumbotron text-center">
+    <!-- <div class="jumbotron text-center">
         <h1>Hello, world!</h1>
         <p>Email authentication working!! Sign Up first and then Login, make sure to check the console.</p>
         <input id="textEmail" type="email" placeholder="Email">
@@ -50,7 +62,6 @@
     </div> -->
 </body>
 <script src="app.js"></script>
-
 <script>
 $(document).ready(function() {
 
@@ -58,6 +69,11 @@ $(document).ready(function() {
         e.preventDefault();
         e.stopPropagation();
         $("img").toggleClass("keyDown");
+    });
+        $('.signUpModal').hover(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $("img").toggleClass("");
     });
 
 });

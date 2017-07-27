@@ -24,7 +24,7 @@ btnLogin.click(function() {
     const password = textPassword.val();
     const auth = firebase.auth();
 
-    console.log("Email: " + email "Password:")
+    console.log("Email: " + email + "Password:")
 
     // Sign In
     const promise = auth.signInWithEmailAndPassword(email, password);
