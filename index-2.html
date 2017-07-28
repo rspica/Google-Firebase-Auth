@@ -29,6 +29,8 @@
     <!-- modal window for sign up -->
     <section class="signUpModal">
         <div class="modalContent">
+            <div class="welcome">
+                <h1>Welcome Back, Glad to see you!</h1></div>
             <div class="form-row col-6">
                 <input id="textEmail" class="validate" type="email" placeholder="Email address" reqiured>
                 <label for="textEmail">email address</label>
@@ -37,11 +39,13 @@
                 <input id="textPassword" class="validate" type="password" placeholder="Password" required>
                 <label for="textPassword">Password</label>
             </div>
-            <div>
-                <button id="btn-Login form-row"><img src="public/images/key_solid.svg" class="key" alt="Key to unlock"> Log in </button>
+            <div class="modalBtn">
+                <button id="btn-Login"><img src="public/images/key_solid-wht.svg" class="modalIcon" alt="Key icon"> Log in </button>
             </div>
-            <div>
-                <button id="btn-SignUp" class="btn-style"> Sign me up </button>
+            <div class="divider">or</div>
+            <div class="modalBtn">
+                
+                <button id="btn-SignUp"><img src="public/images/sign-in-wht.svg" class="modalIcon" alt="sig in icon"><h3 class="btnLabel">Sign me up</h3></button>
             </div>
         </div>
     </section>
@@ -51,15 +55,7 @@
     <main>
         <p>Welcom to Chaperon, a local insiders curated field guide to the lesser know local spots that fly under the radar. This is for people who love finding and exploring new places or who find themselves in a strange place with no resource to turn to. Chaperon, it's like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.</p>
     </main> -->
-    <!-- <div class="jumbotron text-center">
-        <h1>Hello, world!</h1>
-        <p>Email authentication working!! Sign Up first and then Login, make sure to check the console.</p>
-        <input id="textEmail" type="email" placeholder="Email">
-        <input id="textPassword" type="password" placeholder="Password">
-        <button id="btnLogin" class="btn btn-action"> Log in </button>
-        <button id="btnSignUp" class="btn btn-secondary"> Sign up </button>
-        <button id="btnLogout" class="btn btn-action hide"> Log out </button>
-    </div> -->
+ 
 </body>
 <script src="app.js"></script>
 <script>
@@ -70,12 +66,10 @@ $(document).ready(function() {
         e.stopPropagation();
         $("img").toggleClass("keyDown");
     });
-        $('.signUpModal').hover(function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $("img").toggleClass("keyIn ");
-    });
 
+    $('.modalBtn').hover(function(e) {
+        $(this).find('.modalIcon').toggleClass('iconRight');
+    });
 });
 </script>
 
