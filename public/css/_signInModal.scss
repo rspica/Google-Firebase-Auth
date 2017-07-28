@@ -1,0 +1,77 @@
+// sign in modal window
+
+@mixin background-opacity($color, $opacity: 1) {
+    background: $color;
+    /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+.formWrapper {
+    
+}
+
+/* modal sign-up window*/
+
+.signUpModal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include background-opacity(black, 0.85);
+}
+
+.welcome h1 {
+    text-align: center;
+    font-size: 1.3em;
+    color: $secondaryColor;
+    margin-bottom: 40px;
+}
+
+.modalWrapper {
+    display: none;
+    transform: all .35s ease-in;
+}
+
+.modalContent {
+    box-sizing: border-box;
+    background-color: #eee;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 85%;
+    width: 40%;
+    padding: 5%;
+}
+
+.modalIcon {
+    position: absolute;
+    top: 0;
+    left: -500px;
+    width: 26px;
+    z-index: 10;
+    opacity: 0;
+}
+
+.iconRight {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: all .55s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+
+.divider {
+    text-align: center;
+    margin-bottom: 30px;
+    color: $secondaryColor;
+    font-size: .8em;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,228 @@
+/* modal sign-up window*/
+.signUpModal {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  /* The Fallback */
+  background: rgba(0, 0, 0, 0.85); }
+
+.welcome h1 {
+  text-align: center;
+  font-size: 1.3em;
+  color: #999;
+  margin-bottom: 40px; }
+
+.modalWrapper {
+  display: none;
+  transform: all .35s ease-in; }
+
+.modalContent {
+  box-sizing: border-box;
+  background-color: #eee;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 85%;
+  width: 40%;
+  padding: 5%; }
+
+.modalIcon {
+  position: absolute;
+  top: 0;
+  left: -500px;
+  width: 26px;
+  z-index: 10;
+  opacity: 0; }
+
+.iconRight {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: all 0.55s cubic-bezier(0.31, -0.105, 0.43, 1.4); }
+
+.divider {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #999;
+  font-size: .8em; }
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url(taco.jpg) no-repeat;
+  background-size: cover; }
+
+/*-- Responsive breakpoints --*/
+@media screen and (min-width: 725px) and (max-width: 1000px) {
+  .modalContent {
+    width: 50%; } }
+@media screen and (min-width: 601px) and (max-width: 724px) {
+  .modalContent {
+    width: 70%; } }
+@media screen and (max-width: 600px) {
+  .modalContent {
+    width: 80%;
+    padding: 10%; } }
+@media screen and (max-width: 460px) {
+  .modalContent {
+    width: 90%; } }
+body {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  font: 300 1em "Merriweather", serif; }
+
+.headWrapper {
+  padding: 6px 10px 10px;
+  background-color: #F4F4F4;
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.logo {
+  font: 400 2.25em "Vast Shadow", cursive;
+  flex: 3; }
+
+.boxStyle {
+  box-sizing: border-box;
+  border: 1px solid #ec7705;
+  padding: 10px 20px 10px;
+  margin-bottom: 5%;
+  position: relative;
+  /* for input label position*/
+  text-align: center; }
+
+/*  overflow controls the select dropdown arrows*/
+.overflow {
+  overflow: hidden;
+  padding-left: 15px; }
+
+/*  universal input field styles on all forms */
+input {
+  padding: 0;
+  color: #ec7705 !important; }
+
+label {
+  font: 300 .65em sans-serif;
+  color: #999;
+  background-color: #F4F4F4;
+  border: 1px solid #ec7705;
+  border-width: 0 1px 0 1px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  opacity: 1;
+  padding: 0 5px;
+  transition: all 0.35s;
+  transform: translateY(calc(-50% - 1px)); }
+
+input::placeholder {
+  font: 300 0.75em sans-serif;
+  color: #999; }
+
+/* adds input field name to top of field test */
+input:placeholder-shown + label {
+  opacity: 0;
+  transform: translateY(100%); }
+
+input:focus {
+  outline: none;
+  border-color: #fff; }
+
+/*. Unversal button style for all pages and forms*/
+button, input {
+  box-sizing: border-box;
+  background-color: transparent;
+  border-style: none;
+  outline: none;
+  font: 300 0.75em sans-serif;
+  line-height: 1.7;
+  color: #fff;
+  display: block;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  /*font: $fontBody;*/
+  width: 100%;
+  text-align: left;
+  cursor: pointer; }
+
+button:hover, input:hover {
+  color: #999; }
+
+.navContainer {
+  height: 40px; }
+
+.navLabel button, .navLabel input {
+  color: #ec7705; }
+
+.Btn {
+  box-sizing: border-box;
+  border: 1px solid #999;
+  margin-bottom: 30px;
+  background-color: #999;
+  overflow: hidden; }
+
+/* icons for hover states */
+.key {
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  width: 20px;
+  height: 17px;
+  transform: translateX(-50%);
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4); }
+
+.keyDown {
+  z-index: 10;
+  top: 0px; }
+
+/*.xxx {
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+}*/
+.titleText {
+  font-size: 2.5em;
+  line-height: 1.5;
+  color: #999;
+  margin-bottom: 50px; }
+
+.SearchWrapper {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 75px; }
+
+.row {
+  display: flex;
+  justify-content: space-between; }
+
+.col-6 {
+  flex-basis: 48%; }
+
+select {
+  width: 150%;
+  border: none;
+  background: transparent;
+  appearance: none;
+  text-overflow: clip; }
+
+select:focus {
+  outline: none; }
+
+/*# sourceMappingURL=main.css.map */

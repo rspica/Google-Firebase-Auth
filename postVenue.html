@@ -1,0 +1,44 @@
+<!-- Post a venue form -->
+    <section id="signUpModal" class="modalWrapper">
+        <div class="signUpModal">
+            <div class="modalContent">
+                <div class="Tell">
+                    <h1>Tell us what you know!</h1></div>
+                <div class="boxStyle col-6">
+                    <input id="firstName" class="validate" type="text" placeholder="First Name" reqiured>
+                    <label for="textEmail">First Name</label>
+                </div>
+                <div class="boxStyle col-6">
+                    <input id="lastName" class="validate" type="text" placeholder="Last Name" required>
+                    <label for="textPassword">Last Name</label>
+                </div>
+                <div class="boxStyle col-6">
+                    <input id="Location" class="validate" type="text" placeholder="Where are you (Location)" required>
+                    <label for="textPassword">Location</label>
+                </div>
+                <div class="boxStyle col-6">
+                    <input id="venueName" class="validate" type="text" placeholder="What are you posting (venue name)" required>
+                    <label for="venueName">Venue</label>
+                </div>
+                <div class="boxStyle overflow col-6">
+                    <select id="quest-4" class="qValid" name="venue" required>
+                        <option value="" disabled selected hidden>What kind of business are you posting about</option>
+                        <option value=""> | Breakfast | </option>
+                        <option value=""> | Lunch | </option>
+                        <option value=""> | Dinner | </option>
+                        <option value=""> | Coffee &amp; Tea | </option>
+                        <option value=""> | Nightlife | </option>
+                        <option value=""> | Things to do | </option>
+                    </select>
+                </div>
+                <div class="boxStyle col-6">
+                    <textarea id="vDescript" class="validate" type="text" placeholder="What are you posting (venue name)" required>Tell us what you found</textarea>
+                    <label for="vDescript">Sell it</label>
+                </div>
+                <div class="Btn modalBtn boxStyle">
+                    <button id="btn-Login"><img src="public/images/key_solid-wht.svg" class="modalIcon" alt="Key icon" width="40">
+                        <h3 class="navLabel">Post it! </h3></button>
+                </div>
+            </div>
+        </div>
+    </section>

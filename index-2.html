@@ -7,7 +7,7 @@
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" type="text/css" href="public/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="public/css/modal.css">
+    <link rel="stylesheet" type="text/css" href="public/css/main.css">
     <!-- Googel fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Vast+Shadow" rel="stylesheet">
     <!-- Firebase -->
@@ -15,68 +15,134 @@
 </head>
 
 <body>
-    <header class="rowWrapper">
-        <div class="logo col-6">
+<video playsinline autoplay muted loop poster="taco.jpg" id="bgvid">
+    <source src="taco.webm" type="video/webm">
+    <source src="taco.mp4" type="video/mp4">
+</video>
+    <!-- header -->
+    <header class="headWrapper">
+        <div class="logo">
             <h1>MyHood</h1>
         </div>
-        <div class="Btn-wrapper">
-            <button id="btn-Login"><img src="public/images/key_solid.svg" class="key" alt="Key to unlock"> Log in </button>
+        <div class="navLabel">
+            <button id="btn-Login" class="navContainer"><img src="public/images/key_solid.svg" class="key" alt="Key icon"><h4> Log in </h4></button>
         </div>
-        <div>
-            <button id="btn-SignUp" class="btn-style"> Sign me up </button>
+        <div class="navLabel">
+            <button id="btn-SignUp" class="navContainer"><img src="public/images/sign-in.svg" class="key" alt="sign-up icon"><h4> Sign me up </h4></button>
         </div>
     </header>
-    <!-- modal window for sign up -->
-    <section class="signUpModal">
-    
-        <div class="modalContent">
-            <div class="welcome">
-                <h1>Welcome Back, Glad to see you!</h1></div>
-            <div class="form-row col-6">
-                <input id="textEmail" class="validate" type="email" placeholder="Email address" reqiured>
-                <label for="textEmail">email address</label>
+
+    <main>
+        <section class="SearchWrapper">
+        <h1 class="titleText">Find awesome that Yelp and Four Square only dream about</h1>
+            <div class="row">
+            <div class="boxStyle col-6">
+                <input type="text" name="location" class="validate" placeholder="where do you want to go city or town" reqiured>
+                <label for="location">City or town</label>
             </div>
-            <div class="form-row col-6">
-                <input id="textPassword" class="validate" type="password" placeholder="Password" required>
-                <label for="textPassword">Password</label>
+            <div class="boxStyle overflow col-6">
+                <select id="quest-4" class="qValid" name="venue" required>
+                    <option value="" disabled selected hidden>What are you looking for...</option>
+                    <option value=""> | Breakfast | </option>
+                    <option value=""> | Lunch | </option>
+                    <option value=""> | Dinner | </option>
+                    <option value=""> | Coffee &amp; Tea | </option>
+                    <option value=""> | Nightlife | </option>
+                    <option value=""> | Things to do | </option>
+                </select>
             </div>
-            <div class="modalBtn">
-                <button id="btn-Login"><img src="public/images/key_solid-wht.svg" class="modalIcon" alt="Key icon"> Log in </button>
-            </div>
-            <div class="divider">or</div>
-            <div class="modalBtn">
-                <button id="btn-SignUp"><img src="public/images/sign-in-wht.svg" class="modalIcon" alt="sig in icon">
-                    <h3 class="btnLabel">Sign me up</h3></button>
+        </div>
+        <div class="Btn btnLabel boxStyle">
+            <button class="post"><h3 class="btnLabel"> I have a place to share</h3></button>
+        </div>
+        </section>
+    </main>
+
+    <!-- modal window for sign-in -->
+    <section id="modal" class="modalWrapper">
+        <div class="modalForm">
+            <div class="modalContent">
+                <div class="welcome">
+                    <h1>Welcome to the 'Hood, Glad to see you!</h1></div>
+                <div class="boxStyle col-6">
+                    <input id="textEmail" class="validate" type="email" placeholder="Email address" reqiured>
+                    <label for="textEmail">email address</label>
+                </div>
+                <div class="boxStyle col-6">
+                    <input id="textPassword" class="validate" type="password" placeholder="Password" required>
+                    <label for="textPassword">Password</label>
+                </div>
+                <div class="Btn modalBtn boxStyle">
+                    <button id="btn-Login"><img src="public/images/key_solid-wht.svg" class="modalIcon" alt="Key icon" width="40"><h3 class="navLabel">Log in</h3></button>
+                </div>
+                <div class="divider">or</div>
+                <div class="Btn modalBtn boxStyle">
+                    <button id="btn-SignUp"><img src="public/images/sign-in-wht.svg" class="modalIcon" alt="sig in icon">
+                        <h3 class="navLabel">Sign me up</h3></button>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Sign-up modal form -->
+    <section id="signUpModal" class="modalWrapper">
+        <div class="modalForm">
+            <div class="modalContent">
+                <ddiv class="welcome">
+                    <h1>Join the 'Hood!</h1></div>
+                <div class="boxStyle col-6">
+                    <input id="firstName" class="validate" type="text" placeholder="First Name" reqiured>
+                    <label for="firstName">First Name</label>
+                </div>
+                <div class="boxStyle col-6">
+                    <input id="lastName" class="validate" type="text" placeholder="Last Name" required>
+                    <label for="lastName">Last Name</label>
+                </div>
+                <div class="boxStyle col-6">
+                    <input id="textPassword" class="validate" type="password" placeholder="Password" required>
+                    <label for="textPassword">Password</label>
+                </div>
+                <div class="boxStyle col-6">
+                    <input id="textEmail" class="validate" type="email" placeholder="Email address" reqiured>
+                    <label for="textEmail">email address</label>
+                </div>
+             
+                <div class="Btn modalBtn boxStyle">
+                    <button id="btn-Login"><img src="public/images/key_solid-wht.svg" class="modalIcon" alt="Key icon" width="40">
+                        <h3 class="navLabel">Post it! </h3></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!--     <button id="btn-Logout" class="btn-style btn-action hide"> Log out </button>
         </form>
     </header>
     <main>
-        <p>Welcom to Chaperon, a local insiders curated field guide to the lesser know local spots that fly under the radar. This is for people who love finding and exploring new places or who find themselves in a strange place with no resource to turn to. Chaperon, it's like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.</p>
+        <p>Welcom to MyHood, a local insiders curated field guide to the lesser know local spots that fly under the radar. This is for people who love finding and exploring new places or who find themselves in a strange place with no resource to turn to. Chaperon, it's like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.</p>
     </main> -->
 </body>
 <script src="app.js"></script>
 <script>
 $(document).ready(function() {
 
-    $('.Btn-wrapper').hover(function(e) {
+    $('.navLabel').hover(function(e) {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Hovering');
-        $("img").toggleClass("keyDown");
+        $(this).find('.key').toggleClass("keyDown");
     });
 
-    $('.Btn-wrapper').on('click', function(e) {
+    $('.navLabel').on('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        console.log("clicking");
-        console.log(this);
-        $('.signUpModal').toggleClass('signUpModal');
+        console.log('clicking');
+        $('.modalWrapper').toggleClass('modalWrapper');
     });
 
     $('.modalBtn').hover(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         $(this).find('.modalIcon').toggleClass('iconRight');
     });
 });

@@ -1,0 +1,188 @@
+@import 'var';
+@import 'signInModal';
+@import 'signUpModal';
+@import 'videoBG';
+@import 'responsive';
+
+
+body {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    font: $fontBody;
+}
+
+.headWrapper {
+    padding: 6px 10px 10px;
+    background-color: $bgColor;
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    font: $fontLogo;
+    flex: 3;
+}
+
+.boxStyle {
+    box-sizing: border-box;
+    border: 1px solid $primaryColor;
+    padding: 10px 20px 10px;
+    margin-bottom: 5%;
+    position: relative;
+    /* for input label position*/
+    text-align: center;
+}
+
+/*  overflow controls the select dropdown arrows*/
+.overflow {
+    overflow: hidden;
+    padding-left: 15px;
+}
+
+/*  universal input field styles on all forms */
+
+input {
+    @extend button;
+    padding: 0;
+    color: $primaryColor !important;
+}
+
+label {
+    font: 300 .65em sans-serif;
+    color: $secondaryColor;
+    background-color: $bgColor;
+    border: 1px solid $primaryColor;
+    border-width: 0 1px 0 1px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    opacity: 1;
+    padding: 0 5px;
+    transition: all 0.35s;
+    transform: translateY(calc(-50% - 1px));
+}
+
+input::placeholder {
+    font: $formFont;
+    color: $secondaryColor;
+}
+
+
+/* adds input field name to top of field test */
+
+input:placeholder-shown+label {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+input:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+/*. Unversal button style for all pages and forms*/
+
+button {
+    box-sizing: border-box;
+    background-color: transparent;
+    border-style: none;
+    outline: none;
+    font: $formFont;
+    line-height: 1.7;
+    color: #fff;
+    display: block;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    /*font: $fontBody;*/
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+button:hover {
+    color: $secondaryColor;
+}
+
+.navContainer {
+    height: 40px;
+}
+
+.navLabel button {
+    color: $primaryColor;
+}
+
+.Btn {
+    box-sizing: border-box;
+    border: 1px solid $secondaryColor;
+    margin-bottom: 30px;
+    background-color: $secondaryColor;
+    overflow: hidden;
+}
+
+/* icons for hover states */
+.key {
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    width: 20px;
+    height: 17px;
+    transform: translateX(-50%);
+    transition: all .25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+
+.keyDown {
+    z-index: 10;
+    top: 0px;
+}
+
+/*.xxx {
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+}*/
+
+.titleText {
+    font-size: 2.5em;
+    line-height: 1.5;
+    color: $secondaryColor;
+    margin-bottom: 50px;
+}
+
+.SearchWrapper {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 75px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-6 {
+    flex-basis: 48%;
+}
+
+select {
+    width: 150%;
+    border: none;
+    background: transparent;
+    appearance: none;
+    text-overflow: clip;
+}
+
+select:focus {
+    outline: none;
+}
+
+
+
+
+
+
