@@ -120,6 +120,9 @@ input:focus {
   background-color: #999;
   overflow: hidden; }
 
+.signUpModal {
+  display: none; }
+
 .modalIcon {
   position: absolute;
   top: 3px;

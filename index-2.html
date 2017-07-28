@@ -28,6 +28,7 @@
     </header>
     <!-- modal window for sign up -->
     <section class="signUpModal">
+    
         <div class="modalContent">
             <div class="welcome">
                 <h1>Welcome Back, Glad to see you!</h1></div>
@@ -44,8 +45,8 @@
             </div>
             <div class="divider">or</div>
             <div class="modalBtn">
-                
-                <button id="btn-SignUp"><img src="public/images/sign-in-wht.svg" class="modalIcon" alt="sig in icon"><h3 class="btnLabel">Sign me up</h3></button>
+                <button id="btn-SignUp"><img src="public/images/sign-in-wht.svg" class="modalIcon" alt="sig in icon">
+                    <h3 class="btnLabel">Sign me up</h3></button>
             </div>
         </div>
     </section>
@@ -55,7 +56,6 @@
     <main>
         <p>Welcom to Chaperon, a local insiders curated field guide to the lesser know local spots that fly under the radar. This is for people who love finding and exploring new places or who find themselves in a strange place with no resource to turn to. Chaperon, it's like having your best friend with really good taste offering recommendations for what to see, where to eat or where to drink.</p>
     </main> -->
- 
 </body>
 <script src="app.js"></script>
 <script>
@@ -64,7 +64,16 @@ $(document).ready(function() {
     $('.Btn-wrapper').hover(function(e) {
         e.preventDefault();
         e.stopPropagation();
+        console.log('Hovering');
         $("img").toggleClass("keyDown");
+    });
+
+    $('.Btn-wrapper').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("clicking");
+        console.log(this);
+        $('.signUpModal').toggleClass('signUpModal');
     });
 
     $('.modalBtn').hover(function(e) {
