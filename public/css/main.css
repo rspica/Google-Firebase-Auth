@@ -1,5 +1,5 @@
 /* modal sign-up window*/
-.signUpModal {
+.modalForm {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -13,11 +13,11 @@
 
 .welcome h1 {
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #999;
   margin-bottom: 40px; }
 
-.modalWrapper {
+.modalDisplay {
   display: none;
   transform: all .35s ease-in; }
 
@@ -74,7 +74,10 @@ video#bgvid {
 @media screen and (max-width: 600px) {
   .modalContent {
     width: 80%;
-    padding: 10%; } }
+    padding: 10%; }
+
+  .row {
+    display: block !important; } }
 @media screen and (max-width: 460px) {
   .modalContent {
     width: 90%; } }
@@ -163,11 +166,9 @@ button, input {
 button:hover, input:hover {
   color: #999; }
 
-.navContainer {
-  height: 40px; }
-
 .navLabel button, .navLabel input {
-  color: #ec7705; }
+  color: #ec7705;
+  height: 40px; }
 
 .Btn {
   box-sizing: border-box;
@@ -177,7 +178,7 @@ button:hover, input:hover {
   overflow: hidden; }
 
 /* icons for hover states */
-.key {
+.icon {
   position: absolute;
   left: 50%;
   top: -30px;
@@ -186,20 +187,13 @@ button:hover, input:hover {
   transform: translateX(-50%);
   transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4); }
 
-.keyDown {
+.iconDown {
   z-index: 10;
   top: 0px; }
 
-/*.xxx {
-    border: 1px solid #ccc;
-    width: 120px;
-    border-radius: 3px;
-    overflow: hidden;
-    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
-}*/
 .titleText {
-  font-size: 2.5em;
-  line-height: 1.5;
+  font-size: 2.3em;
+  line-height: 1.25;
   color: #999;
   margin-bottom: 50px; }
 

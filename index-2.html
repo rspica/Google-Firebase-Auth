@@ -24,11 +24,11 @@
         <div class="logo">
             <h1>MyHood</h1>
         </div>
-        <div class="navLabel">
-            <button id="btn-Login" class="navContainer"><img src="public/images/key_solid.svg" class="key" alt="Key icon"><h4> Log in </h4></button>
+        <div class="navLabel signIn">
+            <button id="btn-Login"><img src="public/images/key_solid.svg" class="icon" alt="Key icon"><h4> Log in </h4></button>
         </div>
-        <div class="navLabel">
-            <button id="btn-SignUp" class="navContainer"><img src="public/images/sign-in.svg" class="key" alt="sign-up icon"><h4> Sign me up </h4></button>
+        <div class="navLabel signUp">
+            <button id="btn-SignUp"><img src="public/images/sign-in.svg" class="icon" alt="sign-up icon"><h4> Sign me up </h4></button>
         </div>
     </header>
 
@@ -59,7 +59,7 @@
     </main>
 
     <!-- modal window for sign-in -->
-    <section id="modal" class="modalWrapper">
+    <section class="modalDisplay signInModal">
         <div class="modalForm">
             <div class="modalContent">
                 <div class="welcome">
@@ -85,10 +85,10 @@
     </section>
 
     <!-- Sign-up modal form -->
-    <section id="signUpModal" class="modalWrapper">
+    <section class="modalDisplay signUpModal">
         <div class="modalForm">
             <div class="modalContent">
-                <ddiv class="welcome">
+                <div class="welcome">
                     <h1>Join the 'Hood!</h1></div>
                 <div class="boxStyle col-6">
                     <input id="firstName" class="validate" type="text" placeholder="First Name" reqiured>
@@ -130,14 +130,20 @@ $(document).ready(function() {
     $('.navLabel').hover(function(e) {
         e.preventDefault();
         e.stopPropagation();
-        $(this).find('.key').toggleClass("keyDown");
+        $(this).find('.icon').toggleClass("iconDown");
     });
 
-    $('.navLabel').on('click', function(e) {
+    $('.signIn').on('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         console.log('clicking');
-        $('.modalWrapper').toggleClass('modalWrapper');
+        $('.signInModal').toggleClass('modalDisplay');
+    });
+
+      $('.signUp').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.signUpModal').toggleClass('modalDisplay');
     });
 
     $('.modalBtn').hover(function(e) {

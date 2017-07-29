@@ -107,12 +107,9 @@ button:hover {
     color: $secondaryColor;
 }
 
-.navContainer {
-    height: 40px;
-}
-
 .navLabel button {
     color: $primaryColor;
+    height: 40px;
 }
 
 .Btn {
@@ -124,7 +121,7 @@ button:hover {
 }
 
 /* icons for hover states */
-.key {
+.icon {
     position: absolute;
     left: 50%;
     top: -30px;
@@ -134,22 +131,14 @@ button:hover {
     transition: all .25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
-.keyDown {
+.iconDown {
     z-index: 10;
     top: 0px;
 }
 
-/*.xxx {
-    border: 1px solid #ccc;
-    width: 120px;
-    border-radius: 3px;
-    overflow: hidden;
-    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
-}*/
-
 .titleText {
-    font-size: 2.5em;
-    line-height: 1.5;
+    font-size: 2.3em;
+    line-height: 1.25;
     color: $secondaryColor;
     margin-bottom: 50px;
 }

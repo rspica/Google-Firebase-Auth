@@ -1,4 +1,3 @@
-
 /*-- Responsive breakpoints --*/
 
 @media screen and (min-width: 725px) and (max-width: 1000px) {
@@ -18,11 +17,15 @@
         width: 80%;
         padding: 10%;
     }
+    .row {
+        display: block !important;
+    }
 }
 
 
 @media screen and (max-width: 460px) {
-        .modalContent {
+    .modalContent {
         width: 90%;
     }
+
 }

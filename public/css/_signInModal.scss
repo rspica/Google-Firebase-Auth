@@ -6,13 +6,9 @@
     background: rgba($color, $opacity);
 }
 
-.formWrapper {
-    
-}
-
 /* modal sign-up window*/
 
-.signUpModal {
+.modalForm {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -25,12 +21,12 @@
 
 .welcome h1 {
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: $secondaryColor;
     margin-bottom: 40px;
 }
 
-.modalWrapper {
+.modalDisplay {
     display: none;
     transform: all .35s ease-in;
 }
